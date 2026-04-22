@@ -1,0 +1,14 @@
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.app-shell,
+.app-content {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}

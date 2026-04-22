@@ -1,0 +1,206 @@
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-dark);
+  color: var(--bg-light);
+}
+
+.contact-page__shell {
+  width: 100%;
+  min-height: calc(100vh - 4.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+}
+
+.contact-page__form-panel {
+  background: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 4vw, 4.5rem);
+}
+
+.contact-page__form-inner {
+  width: min(100%, 38rem);
+}
+
+.contact-page__form-inner h1 {
+  margin: 0;
+  color: var(--bg-light);
+  font-family: var(--font-headline);
+  font-size: var(--fs-contact-title);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.contact-page__accent {
+  width: 2.25rem;
+  height: 0.22rem;
+  display: block;
+  margin: 1.1rem 0 1.5rem;
+  background: var(--text-gold);
+}
+
+.contact-page__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.contact-page__form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.65rem 1.7rem;
+}
+
+.contact-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.contact-page__field--message {
+  grid-column: 1 / -1;
+}
+
+.contact-page__field span {
+  color: rgba(239, 239, 239, 0.8);
+  font-family: var(--font-accent);
+  font-size: var(--fs-contact-label);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-page__form input,
+.contact-page__form textarea {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid rgb(239 239 239 / 28%);
+  background: transparent;
+  color: var(--bg-light);
+  font: inherit;
+  font-family: var(--font-body);
+  font-size: var(--fs-contact-input);
+  line-height: 1.4;
+  padding: 0 0 0.7rem;
+  outline: none;
+}
+
+.contact-page__form textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.contact-page__form input::placeholder,
+.contact-page__form textarea::placeholder {
+  color: rgba(239, 239, 239, 0.52);
+}
+
+.contact-page__form input:focus,
+.contact-page__form textarea:focus {
+  border-bottom-color: var(--text-gold);
+}
+
+.contact-page__submit {
+  align-self: center;
+  margin-top: 0.25rem;
+}
+
+.contact-page__details-panel {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.88fr) minmax(18rem, 1.12fr);
+  background: var(--bg-light);
+  color: var(--text-dark);
+  min-height: 100%;
+}
+
+.contact-page__details-copy {
+  padding: clamp(2rem, 4vw, 3.5rem);
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  border-right: 1px solid rgb(26 26 26 / 10%);
+}
+
+.contact-page__detail-block h2 {
+  margin: 0 0 0.7rem;
+  color: var(--text-dark);
+  font-family: var(--font-subheading);
+  font-size: var(--fs-footer-title);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact-page__detail-block address,
+.contact-page__detail-block p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.62);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--fs-body-sm);
+  line-height: 1.55;
+}
+
+.contact-page__detail-block a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-page__map-panel {
+  min-height: 100%;
+}
+
+.contact-page__map-panel iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 34rem;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .contact-page {
+    padding-top: 10vh;
+  }
+  .contact-page__shell {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page__details-panel {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    min-height: 34rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .contact-page__details-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page__details-copy {
+    border-right: 0;
+    border-bottom: 1px solid rgb(26 26 26 / 10%);
+  }
+
+  .contact-page__map-panel iframe {
+    min-height: 22rem;
+  }
+
+  .contact-page__form-panel {
+    padding: 2rem 1.25rem;
+  }
+
+  .contact-page__details-copy {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .contact-page__form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,22 @@
+.subfooter-bg {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)),
+    url("../../assets/homepage/flags.png");
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+  .subfooter-bg {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 600px) {
+}

@@ -1,0 +1,119 @@
+.faq-page {
+  min-height: 100vh;
+  padding: clamp(6rem, 11vh, 9rem) 1.5rem;
+  background: var(--bg-light);
+  color: #1b2135;
+}
+
+.faq-page h1 {
+  margin-bottom: clamp(3.5rem, 8vh, 6.25rem);
+  color: #1d253c;
+  font-family: var(--font-headline);
+  font-size: var(--fs-faq-title);
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  text-align: center;
+  text-indent: 0.28em;
+}
+
+.faq-page__list {
+  width: min(64vw, 64rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-page__item {
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 1rem 2.4rem rgba(12, 16, 26, 0.08);
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.faq-page__item--open {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 1.3rem 2.8rem rgba(12, 16, 26, 0.1);
+}
+
+.faq-page__question {
+  width: 100%;
+  min-height: 5.35rem;
+  padding: 0 2.6rem;
+  border: 0;
+  background: transparent;
+  color: #1b2135;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  font: inherit;
+  font-family: var(--font-subheading);
+  font-size: var(--fs-faq-question);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-page__question span:nth-child(2) {
+  flex: 1;
+}
+
+.faq-page__plus {
+  width: 1.4rem;
+  color: #1b2135;
+  font-family: var(--font-accent);
+  font-size: var(--fs-faq-plus);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+
+.faq-page__item--open .faq-page__plus {
+  color: var(--text-gold);
+}
+
+.faq-page__answer {
+  width: min(72%, 42rem);
+  margin: -0.4rem auto 0;
+  padding: 0 0 2.75rem;
+  color: #161a2a;
+  font-family: var(--font-body);
+  font-size: var(--fs-faq-answer);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .faq-page__list {
+    width: min(100%, 44rem);
+  }
+
+  .faq-page__question {
+    padding: 0 1.5rem;
+    gap: 1rem;
+  }
+
+  .faq-page__answer {
+    width: calc(100% - 5rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .faq-page {
+    padding: 4rem 1rem;
+  }
+
+  .faq-page h1 {
+    letter-spacing: 0.16em;
+    text-indent: 0.16em;
+  }
+
+  .faq-page__question {
+    min-height: 5rem;
+  }
+
+  .faq-page__answer {
+    width: calc(100% - 2.5rem);
+  }
+}
