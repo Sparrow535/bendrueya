@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { getPlanBySlug, getPlanImageSrc } from "../../data/tours";
 import "./itinerarypage.css";
-import Subfooter from "../../components/subfooter/Subfooter";
+import Subfooter from "../../components/subfooter/subfooter.jsx";
 
 function ItineraryPage() {
   const { slug } = useParams();

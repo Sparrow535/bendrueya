@@ -5,7 +5,7 @@ import culture3 from "../../assets/packages/culture_3.png";
 import culture4 from "../../assets/packages/culture_4.png";
 import culture5 from "../../assets/packages/culture_5.png";
 import PlanCardsSection from "../../components/plancardssection/plancardssection.jsx";
-import Subfooter from "../../components/subfooter/Subfooter";
+import Subfooter from "../../components/subfooter/subfooter.jsx";
 import { plans } from "../../data/tours";
 
 const baseStripItems = [
