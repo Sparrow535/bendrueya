@@ -20,7 +20,7 @@ function HomePage() {
             authenticity.
           </p>
         </div>
-        <Button label="Explore Experience" theme="dark" />
+        <Button label="Explore Experience" theme="dark" to="/packages" />
       </section>
       <section className="second">
         <div className="second__left">
