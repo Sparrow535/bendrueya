@@ -67,6 +67,9 @@ function Navbar() {
           className={`navbar__links${isMenuOpen ? " navbar__links--open" : ""}`}
           aria-label="Primary navigation"
         >
+          <div className="navbar__menu-brand" aria-hidden="true">
+            BENDRUEYA TRAVEL
+          </div>
           {links.map((link) => (
             <NavLink
               key={link.to}
