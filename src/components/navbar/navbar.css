@@ -69,6 +69,10 @@
   color: var(--bg-light);
 }
 
+.navbar__menu-brand {
+  display: none;
+}
+
 .navbar__toggle {
   display: none;
   align-items: center;
@@ -125,6 +129,10 @@
   transform: translateY(-0.42rem) rotate(-45deg);
 }
 
+.navbar__links--open .navbar__menu-brand {
+  display: none;
+}
+
 /* ---------- Tablets: 601px - 1024px ---------- */
 @media (max-width: 1024px) {
   .navbar__inner {
@@ -156,11 +164,20 @@
     box-shadow:
       0 10px 28px rgb(0 0 0 / 0.05),
       inset 0 1px 0 rgb(255 255 255 / 0.14);
+    isolation: isolate;
   }
 
   .navbar--open {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+    background: linear-gradient(
+      180deg,
+      rgb(255 255 255 / 0.92) 0%,
+      rgb(248 246 241 / 0.88) 100%
+    );
+    backdrop-filter: blur(18px) saturate(145%);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    box-shadow:
+      0 10px 28px rgb(0 0 0 / 0.05),
+      inset 0 1px 0 rgb(255 255 255 / 0.52);
   }
 
   .navbar--open .navbar__brand {
@@ -222,13 +239,10 @@
       visibility 0s linear 0.22s;
     z-index: 15;
     text-align: center;
-    background: var(--bg-light);
+    background: transparent;
     box-shadow: none;
     overscroll-behavior: contain;
-  }
-
-  .navbar__menu-brand {
-    display: none;
+    isolation: isolate;
   }
 
   .navbar__links--open {
@@ -239,11 +253,16 @@
     transition:
       opacity 0.22s ease,
       transform 0.22s ease;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.6px);
-    -webkit-backdrop-filter: blur(5.6px);
+    background: linear-gradient(
+      180deg,
+      rgb(255 255 255 / 0.92) 0%,
+      rgb(248 246 241 / 0.88) 100%
+    );
+    box-shadow:
+      0 16px 36px rgb(0 0 0 / 0.08),
+      inset 0 1px 0 rgb(255 255 255 / 0.72);
+    backdrop-filter: blur(22px) saturate(170%);
+    -webkit-backdrop-filter: blur(22px) saturate(170%);
   }
 
   .navbar__links--open .navbar__menu-brand {
@@ -254,7 +273,7 @@
     padding: 0.95rem 1rem 1.8rem;
     color: var(--text-dark);
     font-family: var(--font-subheading);
-    font-size: var(--fs-display-sm);
+    font-size: var(--fs-nav);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -267,7 +286,7 @@
     min-height: 4.45rem;
     padding: 1.1rem 0.85rem;
     font-family: var(--font-subheading);
-    font-size: var(--fs-package-hero);
+    font-size: clamp(1.05rem, 4.8vw, 1.35rem);
     font-weight: 600;
     letter-spacing: 0.04em;
     text-align: center;
