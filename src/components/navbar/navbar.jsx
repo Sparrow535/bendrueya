@@ -43,8 +43,14 @@ function Navbar() {
   return (
     <header className={`navbar${isMenuOpen ? " navbar--open" : ""}`}>
       <div className="navbar__inner">
-        <Link className="navbar__brand" to="/">
-          BENDRUEYA TRAVEL
+        <Link className="navbar__brand" to="/" aria-label="Bendruya Travel">
+          <img
+            className="navbar__brand-logo"
+            src="/logo.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <span className="navbar__sr-only">Bendruya Travel</span>
         </Link>
 
         <button
@@ -68,7 +74,7 @@ function Navbar() {
           aria-label="Primary navigation"
         >
           <div className="navbar__menu-brand" aria-hidden="true">
-            BENDRUEYA TRAVEL
+            <img className="navbar__menu-brand-logo" src="/logo.png" alt="" />
           </div>
           {links.map((link) => (
             <NavLink
